@@ -50,7 +50,11 @@
 #if !defined(_WIN32) || defined(USING_DIRECTX_HEADERS)
 #include "directx/d3dx12.h"
 #else
+#ifdef _GAMING_XBOX_SCARLETT
+#include <d3dx12_xs.h>
+#else
 #include "d3dx12.h"
+#endif
 #endif
 
 using namespace DirectX;

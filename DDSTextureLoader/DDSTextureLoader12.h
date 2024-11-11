@@ -29,7 +29,11 @@
 #include <directx/d3d12.h>
 #include <dxguids/dxguids.h>
 #else
+#ifdef _GAMING_XBOX_SCARLETT
+#include <d3d12_xs.h>
+#else
 #include <d3d12.h>
+#endif
 #pragma comment(lib,"dxguid.lib")
 #endif
 
